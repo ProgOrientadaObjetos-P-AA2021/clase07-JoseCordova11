@@ -14,6 +14,12 @@ public class Hospital {
     Y leer el archivo
     */
     
+    public Hospital (String n, int noc, double pre){
+        nombre = n;
+        numeroCamas = noc;
+        presupuesto = pre;
+    }
+    
     public void establerNombre (String n){
         nombre = n;
     }
