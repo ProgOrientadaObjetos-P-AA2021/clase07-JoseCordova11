@@ -75,15 +75,12 @@ public class LecturaArchivoSecuencial {
     @Override
     public String toString() {
         String cadena = "Lista de Hospitales\n";
-        for (int i = 0; i < obtenerListaHospitales().size(); i++) {
-            Hospital h = obtenerListaHospitales().get(i);
-            cadena = String.format("%s(%d) %s %d %f\n", cadena,
-                    i + 1,
-                    hospitales.get(i).getNombre(),
-                    hospitales.get(i).getNumeroCamas(),
-                    hospitales.get(i).getPresupuesto()
-            );
-            
+         for (int i = 0; i < obtenerListaHospital().size(); i++) {
+            Hospital h = obtenerListaHospital().get(i);
+            cadena = String.format("%sNombre: %s\nNumero de camas: %d\n"
+                    + "Presupuesto: %f\n", cadena,
+                    h.obtenerNombre(),h.obtenerNumeroCamas(),
+                    h.obtenerPresupuesto());
                     
         }
 
